@@ -8,15 +8,15 @@ const Header = () => {
 			<div className="container mx-auto flex justify-between items-center">
 				<Link href="/">
 					<h1 className="text-4xl font-semibold">
-						Py<span className="text-gray-600">Ade</span>
+						Py<span className="text-orange-500">Ade</span>
 					</h1>
 				</Link>
 				{/* Navbar */}
 				<div className="hidden xl:flex items-center gap-8">
 					<Nav />
-					<Link href={"/contact"}>
+					{/* <Link href={"/contact"}>
 						<Button>Hire me</Button>
-					</Link>
+					</Link> */}
 				</div>
 				{/* mobile nav */}
 				<div className="xl:hidden">Mobile nav</div>
