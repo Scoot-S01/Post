@@ -2,7 +2,7 @@ import Image from "next/image";
 import {Button} from "@/components/ui/button"
 import {Social} from "@/components/ui/Social"
 import {FiDownload} from "react-icons/fi"
-
+import {Photo} from "@/components/ui/Photo"
 
 export default function Home() {
 	return (
