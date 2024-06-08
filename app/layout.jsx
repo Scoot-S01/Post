@@ -1,12 +1,12 @@
-import { Poppins } from "next/font/google";
+import { Mukta } from "next/font/google";
 import "./globals.css";
 // Componets
 import Header from "@/components/ui/Header";
 import PageTransisi from "@/components/ui/PageTransisi";
 import Effects from "@/components/ui/Effects";
-const JetBrainsMono = Poppins({
+const JetBrainsMono = Mukta({
 	subsets: ["latin"],
-	weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+	weight: [ "200", "300", "400", "500", "600", "700", "800"],
 	variable: "--fontjetbrainsMono",
 });
 
