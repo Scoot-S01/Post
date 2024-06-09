@@ -1,8 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import {Button} from "@/components/ui/button"
 import {Social} from "@/components/ui/Social"
 import {FiDownload} from "react-icons/fi"
 import {Photo} from "@/components/ui/Photo"
+import { TypewriterComponent } from "@/components/ui/Typewriter";
 
 export default function Home() {
 	return (
@@ -12,7 +15,8 @@ export default function Home() {
 				justify-between xl:pt-8 xl:pb-24">
 					{/* Text */}
 					<div className="text-center xl:text-left">
-						<h1 className="h1 mb-2 mt-4">Hello saya <br /><span className="text-accent">Putu Adelio</span></h1>
+						{/* <h1 className="h1 mb-2 mt-4">Hello saya <br /><span className="text-accent">Putu Adelio</span></h1> */}
+						<TypewriterComponent typeClass = "h1 mb-2 mt-4"/>
 						<span className="text-xl mb-6 font-semibold">Fullstack <span className="text-accent">Developer</span></span>
 					<p className="max-w-[300px] mb-9 text-white/80">Saya sedang beradaptasi dengan teknologi dan sedang belajar tentang kemajuan teknologi</p>
 					<div className="flex flex-col xl:flex-row items-center gap-8">

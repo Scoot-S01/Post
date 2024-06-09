@@ -23,13 +23,13 @@ module.exports = {
 			primary: "var(--fontjetbrainsMono)",
 		},
 		extend: {
-      colors: {
-        primary: "#0a0a0a",
-        accent: {
-          DEFAULT: "#ea580c",
-          hover: "#f97316",
-        }
-      },
+			colors: {
+				primary: "#0a0a0a",
+				accent: {
+					DEFAULT: "#ea580c",
+					hover: "#f97316",
+				},
+			},
 			keyframes: {
 				"accordion-down": {
 					from: { height: "0" },
@@ -47,4 +47,14 @@ module.exports = {
 		},
 	},
 	plugins: [require("tailwindcss-animate")],
+	layers: {
+		utilities: {
+			// ...
+			".neon-cursor": {
+				"@apply": "cursor-pointer",
+				"text-shadow":
+					"0 0 10px #fff, 0 0 20px #fff, 0 0 40px #0ff, 0 0 80px #0ff, 0 0 160px #0ff",
+			},
+		},
+	},
 };
