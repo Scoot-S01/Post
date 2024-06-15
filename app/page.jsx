@@ -14,10 +14,10 @@ export default function Home() {
 				<div className="flex flex-col xl:flex-row items-center
 				justify-between xl:pt-8 xl:pb-24">
 					{/* Text */}
-					<div className="text-center xl:text-left">
+					<div className="text-center xl:text-left  xl:order-none">
 						{/* <h1 className="h1 mb-2 mt-4">Hello saya <br /><span className="text-accent">Putu Adelio</span></h1> */}
-						<TypewriterComponent className = "h1 mb-2 mt-4"/>
-						<span className="text-xl mb-6 font-semibold">Fullstack <span className="text-accent">Developer</span></span>
+						<TypewriterComponent className = "h1 mb-2 mt-4 text-accent"/>
+						<span className="text-xl mb-6 font-semibold"><span className="text-accent">( Fullstack <span className="text-white">Developer</span> )</span></span>
 					<p className="max-w-[300px] mb-9 text-white/80">Saya sedang beradaptasi dengan teknologi dan sedang belajar tentang kemajuan teknologi</p>
 					<div className="flex flex-col xl:flex-row items-center gap-8">
 
@@ -29,7 +29,7 @@ export default function Home() {
 					</div>
 					</div>
 					{/* Gambar */}
-					<div>
+					<div className=" xl:order-none mb-8">
 						<Photo/>
 					</div>
 				</div>
