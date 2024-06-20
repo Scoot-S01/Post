@@ -16,3 +16,12 @@
 		@apply text-[20px] xl:text-[30px] leading-[1.1] font-semibold
 	}
 }
+
+
+.text-outline{
+	-webkit-text-stroke: 1px #ffff;
+}
+.text-outline-hover{
+	-webkit-text-stroke: 1px #f59e0b;
+}
+

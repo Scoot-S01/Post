@@ -51,13 +51,13 @@ export const Photo = () => {
             strokeWidth="7"
             strokeLinecap="round"
             strokeLinejoin="round"
-            initial={{ strokeDasharray: "150 300" }}
+            initial={{ strokeDasharray: "200 250" }}
             animate={{
-              strokeDasharray: ["300"],
+              strokeDasharray: ["450"],
               rotate: [0, 360],
             }}
             transition={{
-              duration: 0,
+              duration: 60,
               repeat: Infinity,
             }}
           />
