@@ -14,22 +14,22 @@ const services = [
   },
   {
     num: "02",
-    title: "Web Development",
+    title: "Desain",
     description: "-",
     href: " ",
   },
-  {
-    num: "03",
-    title: "Majalah",
-    description: "-",
-    href: " ",
-  },
-  {
-    num: "04",
-    title: "UI/UX",
-    description: "-",
-    href: " ",
-  },
+  // {
+  //   num: "03",
+  //   title: "Majalah",
+  //   description: "-",
+  //   href: " ",
+  // },
+  // {
+  //   num: "04",
+  //   title: "UI/UX",
+  //   description: "-",
+  //   href: " ",
+  // },
 ];
 
 const Services = () => {

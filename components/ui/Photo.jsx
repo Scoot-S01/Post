@@ -27,7 +27,7 @@ export const Photo = () => {
           style={{ borderRadius: "50%", overflow: "hidden", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
         >
           <Image
-            src="/assets/photo1.png"
+            src="/assets/logo.gif"
             layout="fill"
             objectFit="cover"
             priority
@@ -51,7 +51,7 @@ export const Photo = () => {
             strokeWidth="7"
             strokeLinecap="round"
             strokeLinejoin="round"
-            initial={{ strokeDasharray: "200 250" }}
+            initial={{ strokeDasharray: "250 250" }}
             animate={{
               strokeDasharray: ["450"],
               rotate: [0, 360],
