@@ -1,3 +1,5 @@
+/** @format */
+
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
@@ -24,16 +26,23 @@ export const Photo = () => {
             transition: { delay: 1.5, duration: 0.4, ease: "easeIn" },
           }}
           className="w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] mix-blend-lighten absolute"
-          style={{ borderRadius: "50%", overflow: "hidden", top: "50%", left: "50%", transform: "translate(-50%, -50%)" }}
+          style={{
+            borderRadius: "50%",
+            overflow: "hidden",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+          }}
         >
           <Image
             src="/assets/logo.gif"
             layout="fill"
             objectFit="cover"
-            priority
+            priority={true}
             quality={100}
             alt=""
             className="object-contain"
+            unoptimized
           />
         </motion.div>
         {/* circle */}

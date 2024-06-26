@@ -1,7 +1,7 @@
 /** @format */
 "use client";
 import { FaHtml5, FaCss3, FaJs, FaNodeJs } from "react-icons/fa";
-import { SiTailwindcss } from "react-icons/si";
+import { SiTailwindcss, SiFigma } from "react-icons/si";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import {
@@ -12,14 +12,16 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 import { motion } from "framer-motion";
+import { Library } from "lucide-react";
 
 const aboutme = {
   title: "About me",
-  description: "-",
+  description:
+    "Hello everyone, this is about me. You can contact or interact with me and can find out more information with me here",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "PyAde",
+      fieldValue: "Putu Adelio",
     },
     {
       fieldName: "Email",
@@ -29,35 +31,21 @@ const aboutme = {
       fieldName: "Work",
       fieldValue: "Student",
     },
-  ],
-};
-
-const experience = {
-  icon: "",
-  title: "Experience",
-  description: "Your experience details go here.",
-  items: [
     {
-      company: "",
-      posisition: "",
+      fieldName: "Number",
+      fieldValue: "(+62) 851-4272-0930",
     },
-  ],
-};
-const education = {
-  icon: "",
-  title: "Experience",
-  description: "Your experience details go here.",
-  items: [
     {
-      company: "",
-      posisition: "",
+      fieldName: "Region",
+      fieldValue: "Indonesia",
     },
   ],
 };
 
 const skills = {
   title: "My Skills",
-  description: "",
+  description:
+    "hello everyone, this is the skill that I have mastered over the past few years",
   skillslist: [
     {
       icon: <FaHtml5 />,
@@ -79,6 +67,10 @@ const skills = {
       icon: <SiTailwindcss />,
       name: "tailwindcss",
     },
+    {
+      icon: <SiFigma/>,
+      name: "figma"
+    }
   ],
 };
 
@@ -99,30 +91,65 @@ export const about = () => {
       <div className="container mx-auto">
         <Tabs
           defaultValue="experience"
-          className="flex flex-col xl:flex-row gap-[60px]"
+          className="flex flex-col xl:flex-row gap-[60px]" // default 60px
         >
-          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0">
-            <TabsTrigger value="skills" style={{ marginBottom: "20px" }}>
+          <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-4">
+            <TabsTrigger value="skills" >
               Skills
             </TabsTrigger>
-            <TabsTrigger value="aboutme" style={{ marginBottom: "20px" }}>
+            <TabsTrigger value="aboutme">
               AboutMe
             </TabsTrigger>
           </TabsList>
 
-
-
-
           {/* Value Button */}
           <div className="min-h-[70px] w-full">
             <TabsContent value="skills" className="w-full">
-              <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{skills.title}</h3>
-                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">{skills.description}</p>
+              <div className="flex flex-col gap-[30px]">
+                <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                  <h3 className="text-4xl font-bold">{skills.title}</h3>
+                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                    {skills.description}
+                  </p>
+                </div>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                  {skills.skillslist.map((skill, index) => {
+                    return (
+                      <li key={index}>
+                        <TooltipProvider delayDuration={100}>
+                          <Tooltip>
+                            <TooltipTrigger className="w-full h-[150px] 
+                            rounded-xl flex justify-center items-center group">
+                              <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                {skill.icon}
+                              </div>
+                            </TooltipTrigger>
+                            <TooltipContent>
+                              <p>{skill.name}</p>
+                            </TooltipContent>
+                          </Tooltip>
+                        </TooltipProvider>
+                      </li>
+                    );
+                  })}
+                </ul>
               </div>
             </TabsContent>
-            <TabsContent value="aboutme" className="w-full">
-              About me
+
+            {/*  */}
+            <TabsContent value="aboutme" className="w-full text-center xl:text-left">
+              <div className="flex flex-col gap-[30px]">
+                <h3 className="text-4xl font-bold">{aboutme.title}</h3>
+                <p className="max-w-[600px] text-white/50 mx-auto xl:mx-0">{aboutme.description}</p>
+                <ul className="grid grid-col-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                  {aboutme.info.map((items,index)=>{
+                    return <li key={index} className="flex items-center justify-center xl:justify-start gap-4">
+                      <span className="text-white/50">{items.fieldName}</span>
+                      <span className="text-xl">{items.fieldValue}</span>
+                    </li>
+                  })}
+                </ul>
+              </div>
             </TabsContent>
           </div>
         </Tabs>
