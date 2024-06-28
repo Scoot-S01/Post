@@ -21,7 +21,7 @@ export default function Home() {
             <TypewriterComponent className="h1 mb-2 mt-4 text-accent" />
             <span className="text-xl mb-6 font-semibold">
               <span className="text-accent">
-                ( Fullstack <span className="text-white">Developer</span> )
+                ( Pencinta <span className="text-white">Teknologi</span> )
               </span>
             </span>
             <p className="max-w-[300px] mb-9 text-white/80">

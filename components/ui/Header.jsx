@@ -1,4 +1,6 @@
-"use client"
+/** @format */
+
+"use client";
 import React from "react";
 import Link from "next/link";
 import { Button } from "../ui/button";
@@ -18,9 +20,9 @@ const Header = () => {
         {/* Navbar */}
         <div className="hidden xl:flex items-center gap-8">
           <Nav />
-          {/* <Link href={"/contact"}>
-            <Button>Hire me</Button>
-          </Link> */}
+          <a href="mailto:adeliokris@gmail.com">
+            <Button>Contact</Button>
+          </a>
         </div>
         {/* mobile nav */}
         <div className="xl:hidden">
@@ -37,15 +39,15 @@ const Header = () => {
           backgroundSize: "200% 100%",
           backgroundPosition: "0 0",
           transform: "translateX(100%)",
-          ':before': {
+          ":before": {
             content: " ",
-            position: 'absolute',
+            position: "absolute",
             top: 0,
             left: 0,
-            width: '100%',
-            height: '1px',
-            backgroundColor: 'black', /* Adjust color as needed */
-            animation: 'animateDottedLine 1s infinite linear',
+            width: "100%",
+            height: "1px",
+            backgroundColor: "black" /* Adjust color as needed */,
+            animation: "animateDottedLine 1s infinite linear",
           },
         }}
         initial={{ transform: "translateX(100%)" }}
