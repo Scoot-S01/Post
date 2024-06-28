@@ -17,12 +17,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body className={JetBrainsMono.variable}>
-				<Header />
-				<Effects/>
-				<PageTransisi>{children}</PageTransisi>
-			</body>
-		</html>
-	);
+    <html lang="en">
+      <body className={JetBrainsMono.variable}>
+        <Header />
+        <Effects />
+        <PageTransisi>{children}</PageTransisi>
+      </body>
+    </html>
+  );
 }
